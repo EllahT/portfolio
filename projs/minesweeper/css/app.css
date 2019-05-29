@@ -1,0 +1,165 @@
+html {
+  background-image: linear-gradient(pink, skyblue);
+  background-repeat: no-repeat;
+  font-family: Comic Sans MS;
+}
+
+.game {
+  margin-left: 20%;
+}
+
+.header {
+  padding: 20px;
+  color:darkblue;
+  font-size: 1em;
+  text-align: center;
+}
+
+.header table {
+  margin: auto;
+  width: 100%;
+}
+
+.niceP {
+  background-color: lightblue;
+  width: 80px;
+  height: 50px;
+  border: 2px dotted darkblue;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+}
+
+.bottom {
+  padding: 20px;
+  color:darkblue;
+  font-size: 1em;
+}
+
+.beg {
+  width: 220px;
+}
+
+.med {
+  width: 400px;
+}
+
+.exp {
+  width: 600px;
+}
+
+#resetBtn {
+  font-size: 40px;
+  background: none;
+  border: none;
+}
+
+#hints button {
+  background: none;
+  border: none;
+}
+
+.board-container {
+  margin: auto;
+  padding: 20px;
+  float: left;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.board-container table {
+  border: 1px solid black;
+}
+
+.board-container td {
+  background-color: gray;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.cellBtn {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.beginner table {
+  border: 5px double palevioletred;
+  width: 220px;
+}
+
+.beginner td {
+  border: 1px solid palevioletred;
+}
+
+.medium table {
+  border: 5px double salmon;
+  width: 400px;
+}
+
+.medium td {
+  border: 1px solid salmon;
+}
+
+.expert table {
+  border: 5px double coral;
+  width: 600px;
+}
+
+.expert td {
+  border: 1px solid coral;
+}
+
+.distres table {
+  background-color: red;
+}
+
+.distres td {
+  border: 1px solid red;
+}
+
+.hinted table {
+  background-color: blue;
+}
+
+.hinted td {
+  border: 1px solid blue;
+}
+
+.hide {
+  display: none;
+}
+
+.counter1 {
+  color: lightblue;
+}
+
+.counter2 {
+  color: lightseagreen;
+}
+
+.counter3 {
+  color: lightgreen;
+}
+
+.counter4 {
+  color: lightpink;
+}
+
+.counter5 {
+  color: lightcoral;
+}
+
+.counter6 {
+  color: lightsalmon;
+}
+
+.counter7 {
+  color: lightcoral;
+}
+
+.counter8 {
+  color: lightcyan;
+}

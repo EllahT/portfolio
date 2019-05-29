@@ -1,0 +1,112 @@
+body {
+    font-family: 'Gloria Hallelujah', cursive;
+    background-image: url(../img/unicorn.png);
+
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    padding: 20px;
+    color: rgb(129, 129, 206);
+    font-size: 1em;
+    text-align: center;
+    background-color: aliceblue;
+    opacity: 0.8;
+}
+
+.board {
+    margin: 10px;
+    padding: 20px;
+    background-color: lightblue;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0.85;
+}
+
+.level4 {
+    width: 250px;
+    height: 450px;
+}
+
+.level5 {
+    width: 320px;
+    height: 500px;
+}
+
+.level6 {
+    width: 385px;
+    height: 550px;
+}
+
+.menu {
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    background-color: lightblue;
+    font-size: 12px;
+    border-radius: 10px;
+    opacity: 0.85;
+    
+}
+
+.num {
+    margin: 5px;
+    background-color: lightpink;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.num:hover {
+    background-color: indianred;
+    top: -10px;
+    box-shadow: 0px 10px 10px palevioletred;
+    transform: rotateX(20deg);
+}
+
+h2 {
+    color: dodgerblue;
+}
+
+h3 {
+    color: dodgerblue;
+}
+
+.clicked {
+    background-color: indianred;
+    color: white;
+}
+
+#mat button {
+    font-size: 20px;
+}
+
+#reset {
+    font-family: 'Gloria Hallelujah', cursive;
+    background-color: #ff0083;
+    color: white;
+    font-size: 16px;
+    box-shadow: 0px 0px 0px palevioletred;
+    transform: translateZ(0);
+    transition: all 0.2s ease;
+  }
+  
+  #reset:hover {
+    top: -10px;
+    box-shadow: 0px 10px 10px palevioletred;
+    transform: rotateX(20deg);
+  }
+  
+  #reset:active {
+    top: 0px;
+    box-shadow: 0px 0px 0px palevioletred;
+    background: rgb(204, 163, 177);
+  }

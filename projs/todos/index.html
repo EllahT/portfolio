@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todos</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Gloria+Hallelujah|Gochi+Hand|Indie+Flower&display=swap" rel="stylesheet">
+</head>
+<body onload="onInit()">
+    <h1>Todos</h1>
+    <div class="view-container">
+        <div class="addNew-container">
+            <h3> add new todo</h3>
+            <section> what todo? <input type="txt" name="txt" placeholder="do a new tatto"/></section>
+
+            <section>importance:<input type="radio" name="importance" value="1"><label for="1"> 1</label>
+                       <input type="radio" name="importance" value="2"><label for="2"> 2</label>
+                       <input type="radio" name="importance" value="3"><label for="3"> 3</label></section>
+            <button onclick="onAddTodo()">Add Todo</button>
+
+        </div>
+        
+        <section class="filter-container">
+            <h2>Filter</h2>
+            <div class="filter">
+                    <input type="radio" value="all" id="optionAll" checked="true" onclick="onSetFilter(this.value)"/>
+                    <label for="optionAll">All</label>
+                    <input type="radio" value="active" id="optionActive" onclick="onSetFilter(this.value)"/>
+                    <label for="optionActive">Active</label>
+                    <input type="radio" value="done" id="optionDone" onclick="onSetFilter(this.value)"/>
+                    <label for="optionDone">Done</label>
+            </div>
+        </section>
+        <section class="sorting-container">
+            <h2>Sort</h2>
+            <select onchange="onSetSort(this.value)">
+                <option></option>
+                <option value="txt,+">Text (ascending)</option>
+                <option value="txt,-">Text (descending)</option>
+                <option value="createdAt,+">Created (ascending)</option>
+                <option value="createdAt,-">Created (descending)</option>
+                <option value="importance,+">Importance (ascending)</option>
+                <option value="importance,-">Importance (descending)</option>
+            </select>
+        </section>
+    </div>
+    <ul class="todo-list">
+      
+    </ul>
+    <section class="stats-container">
+        <h2>
+            Total todos: <span class="total-count"></span>
+            Active: <span class="active-count"></span>
+        </h2>
+    </section>
+
+    <script src="js/util-service.js"></script>
+    <script src="js/todo-service.js"></script>
+    <script src="js/todo-controller.js"></script>
+</body>
+</html>

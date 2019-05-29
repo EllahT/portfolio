@@ -1,0 +1,116 @@
+body {
+  background-color: black;
+  color:white;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.formLine {
+  margin:10px;
+  padding:10px;
+  background-color: cornflowerblue;
+}
+
+.wall {
+  color: hotpink;
+}
+
+#resetBtn {
+  background-color: hotpink;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+.top {
+  background-color:yellow;
+  height:10px;
+  width:20px;
+  border-radius:10px 10px 0 0;
+}
+
+.topRight {
+  animation: spin1 0.5s infinite linear;
+}
+
+.topLeft {
+  animation: spin2 0.5s infinite linear;
+}
+
+.bottom {
+  background-color:yellow;
+  height:10px;
+  width:20px;
+  border-radius:0 0 10px 10px;
+}
+
+.bottomRight {
+  animation: spin2 0.5s infinite linear;
+}
+
+.bottomLeft {
+  animation: spin1 0.5s infinite linear;
+}
+
+.left {
+  background-color:yellow;
+  height:20px;
+  width:10px;
+  border-radius:0 10px 10px 0;
+  display: inline-block;
+}
+
+.leftTop {
+  animation: spin4 0.5s infinite linear;
+}
+
+.leftBottom {
+  animation: spin3 0.5s infinite linear;
+}
+
+.right {
+  background-color:yellow;
+  height:20px;
+  width:10px;
+  border-radius:10px 0 0 10px;
+  display: inline-block;
+}
+
+.rightTop {
+  animation: spin3 0.5s infinite linear;
+}
+
+.rightBottom {
+  animation: spin4 0.5s infinite linear;
+}
+
+@keyframes spin1 {
+	0%  {transform: rotate(0deg);}
+	50%{transform: rotate(-35deg);}
+  
+}
+@keyframes spin2 {
+	0%  {transform: rotate(0deg);}
+  50%{transform: rotate(35deg);}	
+}
+
+@keyframes spin3 {
+0% {transform: rotate(0deg)}
+50% {transform: rotate(-35deg)}
+}
+
+
+@keyframes spin4 {
+  0% {transform: rotate(0deg)}
+  50% {transform: rotate(35deg)}
+  }

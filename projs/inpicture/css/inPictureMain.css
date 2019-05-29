@@ -1,0 +1,70 @@
+.header {
+    background-color: lightslategray;
+    padding: 20px;
+    border-bottom: 10px solid lightcoral;
+    color:lightpink;
+    font-size: 1em;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.board {
+    margin: 20px;
+    height: 300px;
+    width: 900px;
+    padding: 20px;
+    background-color: lightblue;
+    position: relative;
+    float: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.board img {
+    height: 250px;
+    float: right;
+    border-radius: 10px;
+}
+
+.opt {
+    margin: 20px;
+    padding: 20px;
+    background-color: lightpink;
+    border-radius: 10px;
+    width: 400px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 1s;
+} 
+
+.opt:hover {
+    background-color: indianred;
+}
+
+h2 {
+    color: dodgerblue;
+    text-align: center;
+}
+
+#resetBtn {
+    flex: 1;
+    padding: 25px 50px;
+    margin: 25px;
+    border-radius: 999px;
+    border: 5px solid blue;
+    font-family: 'VT323', monospace;
+    font-size: 25px;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    background-image: url(https://web.archive.org/web/20160312084140im_/http://splatoon.nintendo.com/assets/img/nav-bg-fill-blue.png?1443460871);
+    background-repeat: repeat-x;
+    background-position: 0 -100%;
+    transition: 1.5s ease;
+    filter: hue-rotate(100deg);
+    background-color: hsl(-100, 79%, 72%);
+}
+
+#resetBtn:hover {
+    background-position: 500% 100%;
+  }
