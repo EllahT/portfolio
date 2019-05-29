@@ -383,6 +383,7 @@ header.masthead .intro-text .intro-heading {
     margin-bottom: 30px;
 }
 .portfolio-modal .modal-content img {
+    border-radius: 10px;
     margin-bottom: 30px;
 }
 
