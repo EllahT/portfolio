@@ -9,11 +9,17 @@ function getBooks(start,end) {
 function createBooks() {
     var books = loadFromStorage(KEY)
     if (!books || !books.length) {
-        books = []
-        var names = ['The Guernsey Literary and Potato Peel Pie Society', 'Belong to Me', 'The Brutal Telling', 'The Girl with the Dragon Tattoo', 'Garden Spells','Half Broke Horses', 'The Thirteenth Tale', 'The Light Between Oceans']
+        books = [];
+        var names = [{en:'The Guernsey Literary and Potato Peel Pie Society',he:'מועדון גרנזי לספרות ופלאי קליפות תפודים'}, 
+                     {en:'Belong to Me',he:'שתהיה שלי'}, 
+                     {en:'The Girl with the Dragon Tattoo',he:'נערה עם קעקוע דרקון'}, 
+                     {en:'Garden Spells',he:'מתכונים מכושפים'}, 
+                     {en:'The Thirteenth Tale',he:'הסיפור השלושה עשר'}, 
+                     {en:'The Light Between Oceans',he:'אור בין האוקיינוסים'}];
+
         for (var i = 0; i < names.length; i++) {
-            var name = names[i]
-            books.push(createBook(name))
+            var name = names[i];
+            books.push(createBook(name));
         }
     }
     gBooks = books;
@@ -23,9 +29,11 @@ function createBooks() {
 function createBook(bookName, price) {
     return {
         id: makeId(),
-        name: bookName,
+        name: bookName.en,
+        nameHe: bookName.he,
         price: (price)? price : getRandomIntInclusive(20,100),
-        imgUrl: getImgUrl(bookName),
+        imgUrl: getImgUrl(bookName.en,'en'),
+        imgUrlHe: getImgUrl(bookName.en,'he'),
         rate: 0
     }
 }
@@ -52,8 +60,14 @@ function updateBook(bookId, newPrice) {
     saveBooks();
 }
 
-function getImgUrl(bookName) {
-    var url = 'img/'+bookName+'.jpg';
+function getImgUrl(bookName,lang) {
+    var url;
+    if (lang === 'en') {
+        url = 'img/'+bookName+'.jpg';
+    } else {
+        url = 'img/'+bookName+'-he.jpg';
+    }
+    
     return url;
 }
 

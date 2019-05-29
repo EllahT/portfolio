@@ -18,7 +18,7 @@ function renderProjects() {
                             <img class="img-fluid" src="${proj.img}" onerror="onImgError(${proj.id})" alt="">
                     </div>
                         <div class="portfolio-caption">
-                            <h4>${proj.name}</h4>
+                            <h4>${proj.title}</h4>
                             <p class="text-muted">${proj.desc}</p>
                         </div>
                 </div>`
@@ -36,7 +36,7 @@ function onOpenProjModal(projId) {
     var proj = getProjById(projId);
     $('.modal-title').text(proj.name);
     $('.proj-title').text(proj.title);
-    $('.proj-decription').text(proj.desc);
+    $('.proj-description').text(proj.desc);
     $('.publishedAt').text(proj.publishedAt);
     $('.lables').text(proj.labels.join(''));
     $('.modal-img').attr('src',proj.img);

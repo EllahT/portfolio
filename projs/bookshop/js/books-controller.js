@@ -1,6 +1,5 @@
 'use strict'
 
-const currency = '$'
 var gBooksPerPage = 4; 
 var gCurrPage = 0;
 
@@ -12,11 +11,11 @@ function init() {
 function renderBooks() {
     var books = getBooks(gCurrPage*gBooksPerPage,gCurrPage*gBooksPerPage+gBooksPerPage)
     var strHtmls = books.map(function (book) {
-
-        return `<tr class="${book.id}"><td>${book.id}</td><td>${book.name}</td><td><span class="bookPrice">${book.price}</span>${currency}</td>
-        <td><button type="button" class="btn btn-primary" onclick="onReadBook('${book.id}')">Read</button>
-        <button type="button" class="btn btn-primary" onclick="onOpenUpdateModal('${book.id}')">Update</button>
-        <button type="button" class="btn btn-primary" onclick="onDeleteBook('${book.id}')">Delete</button></td></tr>`
+        var name = (gCurrLang === "en")? book.name : book.nameHe;
+        return `<tr class="${book.id}"><td>${book.id}</td><td>${name}</td><td><span class="bookPrice">${book.price}</span><span data-trans="currency">$</span></td>
+        <td><button type="button" class="btn btn-outline-success" onclick="onReadBook('${book.id}')" data-trans="actionRead">Read</button>
+        <button type="button" class="btn btn-outline-info" onclick="onOpenUpdateModal('${book.id}')" data-trans="actionUpdate">Update</button>
+        <button type="button" class="btn btn-outline-danger" onclick="onDeleteBook('${book.id}')" data-trans="actionDelete">Delete</button></td></tr>`
     })
     $('.books-tbody').html(strHtmls.join(''))
     $('.curr-page').text(gCurrPage+1);
@@ -24,12 +23,14 @@ function renderBooks() {
 
 function onReadBook(bookId) {
     var book = getBookById(bookId);
-    $('.name').text(book.name);
+    var name = (gCurrLang === 'en')? book.name : book.nameHe;
+    var img = (gCurrLang === 'en')? book.imgUrl : book.imgUrlHe;
+    $('.name').text(name);
     $('.rate').text(book.rate);
     $('.price').text(book.price+'$');
     $('.buttonUp').click({param1: bookId, param2: '+'},onChangeRate);
     $('.buttonDown').click({param1: bookId, param2: '-'},onChangeRate);
-    $('.modal-img').attr('src',book.imgUrl);
+    $('.modal-img').attr('src',img);
     $('.modal-img').attr('onerror',"onImgError()");
     $('.modal').show();
 }
@@ -104,4 +105,19 @@ function onChangePage(op) {
     if ((gCurrPage === 0 && op === '-') || (gCurrPage === Math.floor((getBooksCount()/gBooksPerPage)) && op === '+')) return;
     (op === '+')? gCurrPage++ :gCurrPage--;
     renderBooks();
+    doTrans();
 }
+
+function onSetLang(lang) {
+    setLang(lang);
+    var currLangImg = 'img/'+lang+'.png';
+    document.querySelector('.langImg').setAttribute('src',currLangImg);
+    if (lang === 'he') document.body.classList.add('rtl');
+    else document.body.classList.remove('rtl');
+    
+    renderBooks();
+    doTrans();
+    
+}
+
+

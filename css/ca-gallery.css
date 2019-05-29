@@ -125,6 +125,8 @@ body {
     flex-direction: column;
     align-items: center;
     align-content: space-between;
+    width: 100%;
+    padding: 0px 20px;
 }
 
 .offcanvas-aside #contact p {
@@ -134,18 +136,18 @@ body {
 .offcanvas-aside #contact input {
     margin-top: 5px;
     margin-bottom: 20px;
+    border-radius: 5px;
 }
 
-.offcanvas-aside #contact [name="email"] {
-    width: 300px;
+.offcanvas-aside #contact textarea {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
-.offcanvas-aside #contact [name="subject"] {
-    width: 300px;
-}
-
-.offcanvas-aside #contact [name="text"] {
-    width: 300px;
+.offcanvas-aside #contact [name] {
+    margin: 0 auto;
+    width: 100%;
 }
 
 .offcanvas-aside #contact button {
@@ -154,7 +156,7 @@ body {
 
 #mainNav {
     background-color: #222222;
-    z-index: 1000000;
+    z-index: 100;
 }
 #mainNav .navbar-toggler {
     font-size: 12px;
@@ -388,8 +390,13 @@ header.masthead .intro-text .intro-heading {
 }
 
 .modal-img {
-    max-width: 80%;
+    max-width: 60%;
     margin: auto;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
 }
 
 .projModal {
@@ -413,14 +420,12 @@ header.masthead .intro-text .intro-heading {
 }
 
 .modal-dialog {
-    min-width: 500px;
     text-align: center;
 }
 
 .modal-body ul {
     list-style-type: none;
 }
-
 
 .portfolio-modal .modal-content button {
     cursor: pointer;
@@ -837,4 +842,8 @@ fieldset[disabled] .btn-xl:hover {
 .about-description {
     color: black;
     text-align: center;
+}
+
+.proj-title {
+    font-weight: bold;
 }
