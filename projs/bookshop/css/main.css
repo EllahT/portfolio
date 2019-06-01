@@ -70,8 +70,17 @@ img {
     margin: 10px;
 }
 
+.inlineModal {
+    width: 400px;
+    background-color: #77c8ee;
+    border-radius: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
 .inlineModal input {
-    min-width: 220px;
+    min-width: 350px;
+    margin-bottom: 5px;
 }
   
 .dropdown {

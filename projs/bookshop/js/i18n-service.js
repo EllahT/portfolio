@@ -77,6 +77,33 @@ var gTrans = {
     currency: {
         en: '$',
         he: '₪'
+    },
+
+    newBookNameEn: {
+        en: 'what\'s the new book\'s name in english? (capitalized)',
+        he: 'מה שם הספר החדש באנגלית (אותיות ראשונות גדולות)'
+
+    },
+
+    newBookNameHe: {
+        en: 'what\'s the new book\'s name in hebrew?',
+        he: 'מה שם הספר החדש בעברית?'
+
+    },
+
+    newBookPrice: {
+        en: 'what\'s the new book\'s price?',
+        he: 'מה המחיר של הספר החדש?'
+    },
+
+    updateNewPrice: {
+        en: 'what\'s the new price?',
+        he: 'מה המחיר החדש?'
+    },
+
+    updateBtn: {
+        en: 'Update',
+        he: 'עדכן'
     }
 };
 

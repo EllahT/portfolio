@@ -11,7 +11,7 @@ function createQuestsTree() {
         questsTree = createQuest('Male?');
         questsTree.yes = createQuest('Gandhi');
         questsTree.no = createQuest('Rita');    
-    }
+    } 
     
     gQuestsTree = questsTree;
     saveQuestsTree();
@@ -45,7 +45,7 @@ function addGuess(newQuestTxt, newGuessTxt) {
     var newQuest = createQuest(newQuestTxt);
     newQuest.no = gCurrQuest;
     newQuest.yes = createQuest(newGuessTxt);
-    // (gLastRes === "no")? gPrevQuest.no = newQuest: gPrevQuest.yes = newQuest;
+    (gLastRes === "no")? gPrevQuest.no = newQuest: gPrevQuest.yes = newQuest;
     saveQuestsTree();
 }
 

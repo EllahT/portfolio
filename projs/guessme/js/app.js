@@ -55,9 +55,8 @@ function onAddGuess() {
     
     // DONE: Call the service addGuess
     addGuess(quest,guess);
-    console.log('done adding, here is the tree now:', gQuestsTree);
-    $('input[name="newGuess"]').val('');
-    $('input[name="newQuest"]').val('');
+    $('input[name="newGuess"]').val(' ');
+    $('input[name="newQuest"]').val(' ');
     onRestartGame();
 }
 

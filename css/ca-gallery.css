@@ -840,10 +840,19 @@ fieldset[disabled] .btn-xl:hover {
 }
 
 .about-description {
-    color: black;
+    color: #c79f9f;
     text-align: center;
 }
 
 .proj-title {
     font-weight: bold;
+}
+
+.portfolioSec {
+    background-color: #8473a2bf
+}
+
+.meSec {
+    background-color: #4e2794;
+    color: #c79f9f;
 }

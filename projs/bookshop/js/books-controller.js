@@ -19,6 +19,7 @@ function renderBooks() {
     })
     $('.books-tbody').html(strHtmls.join(''))
     $('.curr-page').text(gCurrPage+1);
+    doTrans();
 }
 
 function onReadBook(bookId) {
@@ -46,25 +47,27 @@ function onDeleteBook(bookId) {
 
 function onOpenAddBookModal() {
     $('.addBtn').after(`<div class="inlineModal">
-    <input name ="name" type="txt" placeholder="what\'s the new book\'s name?"/>
-    <input name ="price" type="number" placeholder="what\'s the new book\'s price?"/>
-    <button onclick="onAddBook()">update</button>
-    <button onclick="onCloseInlineModal()">X</button></div>`);
+    <input data-trans="newBookNameEn" name ="nameEn" type="txt" placeholder="what\'s the new book\'s name in english? (capitalized)"/>
+    <input data-trans="newBookNameHe" name ="nameHe" type="txt" placeholder="what\'s the new book\'s name in hebrew?"/>
+    <input data-trans="newBookPrice" name ="price" type="number" placeholder="what\'s the new book\'s price?"/>
+    <button data-trans="updateBtn" class="btn btn-primary" onclick="onAddBook()">update</button>
+    <button class="btn btn-primary" onclick="onCloseInlineModal()">X</button></div>`);
+    doTrans();
 }
 
 function onAddBook() {
-    var name = $('[name="name"]').val();
-    var capitlizedName = name.charAt(0).toUpperCase() + name.slice(1);
+    var name = {en: $('[name="nameEn"]').val(), he: $('[name="nameHe"]').val()};
     var price = $('[name="price"]').val();
-    addBook(capitlizedName,price)
+    addBook(name,price)
     renderBooks()
 }
 
 function onOpenUpdateModal(bookId) {
     $('.'+bookId).after(`<tr class="inlineModal"><td colspan="4">
-    <input name ="newPrice" type="number" placeholder="what\'s the new price?"/>
-    <button onclick="onUpdateBook('${bookId}')">update</button>
-    <button onclick="onCloseInlineModal()">X</button></td></tr>`);
+    <input data-trans="updateNewPrice" name ="newPrice" type="number" placeholder="what\'s the new price?"/>
+    <button data-trans="updateBtn" class="btn btn-primary" onclick="onUpdateBook('${bookId}')">update</button>
+    <button class="btn btn-primary" onclick="onCloseInlineModal()">X</button></td></tr>`);
+    doTrans();
 }
 
 function onUpdateBook(bookId) {
@@ -105,7 +108,6 @@ function onChangePage(op) {
     if ((gCurrPage === 0 && op === '-') || (gCurrPage === Math.floor((getBooksCount()/gBooksPerPage)) && op === '+')) return;
     (op === '+')? gCurrPage++ :gCurrPage--;
     renderBooks();
-    doTrans();
 }
 
 function onSetLang(lang) {
