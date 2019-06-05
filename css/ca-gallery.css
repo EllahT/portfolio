@@ -411,8 +411,11 @@ header.masthead .intro-text .intro-heading {
 }
 
 .modal-footer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(40px,1fr));
+    grid-gap: 10px;
+    max-width: 100%;
 }
 
 .projModal {

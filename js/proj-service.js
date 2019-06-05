@@ -26,7 +26,8 @@ function createProject(name,title='',desc='') {
         name: name,
         title: title,
         desc: desc,
-        url: 'https://ellaht.github.io/'+name,
+        projUrl: 'https://ellaht.github.io/'+name,
+        codeUrl: 'https://github.com/EllahT/'+name,
         publishedAt: getTimeStamp(),
         labels: [],
         img: getImgUrl(name.toLowerCase())

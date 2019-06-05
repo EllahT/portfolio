@@ -41,7 +41,8 @@ function onOpenProjModal(projId) {
     $('.lables').text(proj.labels.join(''));
     $('.modal-img').attr('src',proj.img);
     $('.modal-img').attr('onerror',"onImgError()");
-    $('.projLink').attr('href',proj.url);
+    $('.projLink').attr('href',proj.projUrl);
+    $('.codeLink').attr('href',proj.codeUrl);
     $('.projModal').show();
 }
 
