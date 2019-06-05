@@ -44,7 +44,7 @@ section h3.section-subheading {
 }
 @media (min-width: 768px) {
     section {
-        padding: 150px 0;
+        padding: 50px 0;
     }
 }
 ::-moz-selection {
@@ -257,10 +257,7 @@ header.masthead .intro-text .intro-heading {
     text-transform: uppercase;
 }
 @media (min-width: 768px) {
-    header.masthead .intro-text {
-        padding-top: 300px;
-        padding-bottom: 200px;
-    }
+
     header.masthead .intro-text .intro-lead-in {
         font-size: 40px;
         font-style: italic;
@@ -282,6 +279,7 @@ header.masthead .intro-text .intro-heading {
     text-transform: none;
 }
 #portfolio .portfolio-item {
+    width: 100%;
     right: 0;
     margin: 0 0 15px;
 }
@@ -301,6 +299,7 @@ header.masthead .intro-text .intro-heading {
     transition: all ease 0.5s;
     opacity: 0;
     background: rgba(78, 39, 148, 0.9);
+    border-radius: 2rem;
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
     opacity: 1;
@@ -327,7 +326,8 @@ header.masthead .intro-text .intro-heading {
     margin: 0 auto;
     padding: 25px;
     text-align: center;
-    background-color: white;
+
+
 }
 #portfolio .portfolio-item .portfolio-caption h4 {
     margin: 0;
@@ -346,6 +346,22 @@ header.masthead .intro-text .intro-heading {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
+}
+
+.portfolio-item {
+    background-color: #4e279469;
+    border: 5px solid #4e2794;
+    border-radius: 2.5rem;
+}
+
+.portfolio-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 2rem;
+}
+
+.portfolio-text {
+    color: #f0f8ff;
 }
 
 .portfolio-modal .modal-dialog .hide {
@@ -779,7 +795,7 @@ fieldset[disabled] .btn-primary:hover {
     font-size: 18px;
     font-weight: 700;
     padding: 20px 40px;
-    border-radius: 3px;
+    border-radius: 0.5rem;
     color: white;
     border-color: #381b6d;
     background-color: #4e2794;
@@ -840,7 +856,7 @@ fieldset[disabled] .btn-xl:hover {
 }
 
 .about-description {
-    color: #c79f9f;
+    color: #f1f1f1;
     text-align: center;
 }
 
@@ -853,6 +869,14 @@ fieldset[disabled] .btn-xl:hover {
 }
 
 .meSec {
-    background-color: #4e2794;
-    color: #c79f9f;
+    background-color: #4e279469;
+    color: #f1f1f1;
+    padding-top: 15px;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(400px,1fr));
+    grid-gap: 2.5rem;
 }

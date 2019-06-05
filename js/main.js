@@ -8,18 +8,18 @@ function renderProjects() {
     var elContainer = document.querySelector('.projects-container');
 
     var strHtmls = gProjects.map(function(proj){
-        return `<div class="${proj.id} col-md-4 col-sm-6 portfolio-item">
+        return `<div class="${proj.id} portfolio-item">
                     <div class="portfolio-link" data-toggle="modal" onclick="onOpenProjModal('${proj.id}')">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                            <img class="img-fluid" src="${proj.img}" onerror="onImgError(${proj.id})" alt="">
+                            <img class="portfolio-img" src="${proj.img}" onerror="onImgError(${proj.id})" alt="">
                     </div>
                         <div class="portfolio-caption">
                             <h4>${proj.title}</h4>
-                            <p class="text-muted">${proj.desc}</p>
+                            <p class="portfolio-text">${proj.desc}</p>
                         </div>
                 </div>`
     })
